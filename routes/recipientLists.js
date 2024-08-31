@@ -31,6 +31,15 @@ router.post('/', async (req, res) => {
     }
 });
 
+router.get('/api/recipient-lists', async (req, res) => {
+    try {
+        const lists = await RecipientList.find();
+        res.status(200).json(lists);
+    } catch (error) {
+        res.status(500).json({ message: 'Error fetching recipient lists' });
+    }
+});
+
 module.exports = router;
 
 
