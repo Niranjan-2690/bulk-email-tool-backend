@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-mongoose.connect('mongodb+srv://niranjanniran4:2MzVsanVTasZ2K8R@cluster0.na06d.mongodb.net/bulk-email-tool?retryWrites=true&w=majority&appName=Cluster0')
+mongoose.connect('mongodb+srv://niranjan:loXjacicNMohfaTq@cluster0.na06d.mongodb.net/bulk-email-tool?retryWrites=true&w=majority&appName=Cluster0')
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.log("Error connecting mangodb", err));
 
