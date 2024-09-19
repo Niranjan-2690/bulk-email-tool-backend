@@ -23,4 +23,12 @@ app.use('/api/recipient-lists', recipientListRoutes);
 app.use('/api/notifications', notificationRoutes);
 app.use('/api/templates', templatesRouter);
 
-app.listen(3000, () => console.log('Server running on port 3000'));
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, "0.0.0.0", (err)=>{
+    if(err){
+        console.log(err, "Error")
+    }else{
+        console.log(`Server is connected in port ${PORT}`)
+    }
+});
